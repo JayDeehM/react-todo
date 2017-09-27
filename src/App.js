@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import TodoForm from './Components/todo/TodoForm.js';
 import TodoList from './Components/todo/TodoList.js';
+import SearchList from './Components/todo/Search.js';
 
 class App extends Component {
 
@@ -23,6 +24,7 @@ class App extends Component {
     return (
       <div>
         <h1>The Todo list</h1>
+        <SearchList />
         <TodoForm addNewTodoFunc={this.addNewTodo.bind(this)} />
         <TodoList todo_data={this.state.todos} />
       </div>
