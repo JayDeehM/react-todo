@@ -10,12 +10,11 @@ class TodoForm extends Component {
 	}
 
 	addTodo() {
-		console.log('clicked!!!!')
+		this.props.addNewTodoFunc(this.state.text);
+		this.setState({text: ''});
 	}
 
 	updateText(event) {
-		console.log('updateText')
-		console.log(event.target.value)
 		this.setState({
 			text: event.target.value
 		})
